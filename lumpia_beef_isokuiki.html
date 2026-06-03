@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumpia Beef Isokuiki | Enak, Lezat, Bergizi</title>
+  
+  <!-- Font Import -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap)" rel="stylesheet">
+
+  <!-- Link ke file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+  <header id="header">
+    <div class="logo">
+      <h1>LUMPIA<span>BEEF</span></h1>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#pemesanan">Pesan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="beranda">
+    <h2 class="reveal">Lumpia Beef Isokuiki</h2>
+    <h3 class="reveal" style="transition-delay: 0.1s;">"ENAK, LEZAT, DAN BERGIZI!"</h3>
+    <p class="reveal" style="transition-delay: 0.2s;">
+      Sajian lumpia kulit super renyah dengan isian daging sapi tebal dan saus lumer. Dibuat dengan tekad untuk menyajikan kualitas terbaik dengan harga bersahabat.
+    </p>
+    <div class="reveal" style="transition-delay: 0.3s;">
+      <a href="#pemesanan" class="btn-primary">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Produk Section -->
+  <section id="produk">
+    <h2 class="section-title reveal">Menu Unggulan</h2>
+    <div class="produk-grid">
+      
+      <div class="produk-card reveal">
+        <div class="produk-img-wrapper">
+          <img src="gambar_produk/lumpia beef patty.png" alt="Lumpia Beef Patty" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="img-placeholder" style="display:none;">🌯</span>
+        </div>
+        <div class="produk-info">
+          <h3>Lumpia Beef Patty</h3>
+          <p>Kulit lumpia super renyah, isian beef patty tebal, selada segar, irisan tomat, disiram saus & mayones spesial lumer.</p>
+          <div class="produk-price">Rp 12.000</div>
+          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty')">Pesan Ini</a>
+        </div>
+      </div>
+
+      <div class="produk-card reveal" style="transition-delay: 0.1s;">
+        <div class="produk-img-wrapper">
+          <img src="gambar_produk/lumpia beef patty telur.png" alt="Lumpia Beef Patty + Telur" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="img-placeholder" style="display:none;">🍳</span>
+        </div>
+        <div class="produk-info">
+          <h3>Beef Patty + Telur</h3>
+          <p>Ekstra protein! Ditambah telur ceplok gurih di atas beef patty hangat, sayuran segar, dan saus khas Isokuiki.</p>
+          <div class="produk-price">Rp 15.000</div>
+          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty + Telur')">Pesan Ini</a>
+        </div>
+      </div>
+
+      <div class="produk-card reveal" style="transition-delay: 0.2s;">
+        <div class="produk-img-wrapper">
+          <img src="gambar_produk/lumpia beef patty keju.png" alt="Lumpia Beef Patty + Keju" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="img-placeholder" style="display:none;">🧀</span>
+        </div>
+        <div class="produk-info">
+          <h3>Beef Patty + Keju</h3>
+          <p>Sensasi creamy maksimal! Tambahan slice keju meleleh menyelimuti beef patty, dipadu dengan sayur dan kulit krispi.</p>
+          <div class="produk-price">Rp 14.000</div>
+          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty + Keju')">Pesan Ini</a>
+        </div>
+      </div>
+
+      <div class="produk-card reveal" style="transition-delay: 0.3s;">
+        <div class="produk-img-wrapper">
+          <img src="gambar_produk/lumpia smoked beef.png" alt="Lumpia Smoked Beef" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="img-placeholder" style="display:none;">🥩</span>
+        </div>
+        <div class="produk-info">
+          <h3>Smoked Beef</h3>
+          <p>Aroma smokey khas! Irisan daging sapi asap pilihan, selada, tomat, disempurnakan olesan saus mayones nikmat.</p>
+          <div class="produk-price">Rp 8.000</div>
+          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Smoked Beef')">Pesan Ini</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="tentang">
+    <div class="tentang-container">
+      <h2 class="section-title reveal">Kisah Isokuiki</h2>
+      
+      <div class="card-info reveal">
+        <h3>Awal Mula</h3>
+        <p>Kisah kami bukan tentang modal besar sejak hari pertama, melainkan tentang tekad dan proses belajar. Berawal dari 8 bulan pengalaman membantu usaha orang lain, kami mengumpulkan ilmu untuk melangkah sendiri. Kami memegang teguh satu rahasia: <strong>konsistensi</strong>. Tidak berkompromi soal rasa, pelayanan terbaik, dan selalu tepat waktu.</p>
+      </div>
+
+      <div class="card-info reveal">
+        <h3>Visi & Misi</h3>
+        <p><strong>Visi:</strong> Menjadi UMKM kuliner lumpia pilihan masyarakat dengan rasa khas, kualitas terbaik, dan pelayanan memuaskan.</p>
+        <p style="margin-top: 10px;"><strong>Misi:</strong></p>
+        <ul>
+          <li>Menyediakan lumpia dengan bahan berkualitas.</li>
+          <li>Menjaga cita rasa yang khas dan konsisten.</li>
+          <li>Memberikan pelayanan terbaik kepada pelanggan.</li>
+        </ul>
+      </div>
+
+      <div class="card-info reveal">
+        <h3>Keunggulan Kami</h3>
+        <p>Isian daging sapi yang jauh lebih tebal (tidak pelit), tekstur kulit lumpia yang dijamin tetap renyah meskipun sudah dingin, serta harga yang sangat ramah di kantong pelajar maupun mahasiswa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pemesanan -->
+  <section id="pemesanan">
+    <h2 class="section-title reveal">Form Pemesanan</h2>
+    <div class="form-container reveal">
+      <form id="form-pesan-wa">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="menu">Pilihan Menu</label>
+          <select id="menu" class="form-control" required>
+            <option value="" disabled selected>-- Pilih Menu --</option>
+            <option value="Lumpia Beef Patty">Lumpia Beef Patty (Rp 12.000)</option>
+            <option value="Lumpia Beef Patty + Telur">Lumpia Beef Patty + Telur (Rp 15.000)</option>
+            <option value="Lumpia Beef Patty + Keju">Lumpia Beef Patty + Keju (Rp 14.000)</option>
+            <option value="Lumpia Smoked Beef">Lumpia Smoked Beef (Rp 8.000)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="jumlah">Jumlah Porsi</label>
+          <input type="number" id="jumlah" class="form-control" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="alamat">Alamat Pengiriman</label>
+          <textarea id="alamat" class="form-control" placeholder="Detail alamat lengkap (Jl, RT/RW, Patokan)" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan Tambahan (Opsional)</label>
+          <input type="text" id="catatan" class="form-control" placeholder="Cth: Pedas sedang, jangan pakai tomat">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">
+          Pesan via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Ulasan -->
+  <section id="ulasan">
+    <h2 class="section-title reveal">Kata Mereka</h2>
+    <div class="ulasan-grid">
+      <blockquote class="reveal">
+        <p>"Rasanya beneran pecah di mulut! Dagingnya kerasa banget bumbunya dan kejunya lumer pol. Fix bakal sering jajan di sini pas lagi ngerjain tugas kampus."</p>
+        <cite>— Dapin, Mahasiswa</cite>
+      </blockquote>
+      <blockquote class="reveal" style="transition-delay: 0.15s;">
+        <p>"Kulit lumpianya renyah banget, sausnya juga juara beda dari yang lain. Pengirimannya cepat jadi pas nyampe rumah masih anget. Recommended banget!"</p>
+        <cite>— Vira, Pelanggan Setia</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Kontak & Footer -->
+  <section id="kontak">
+    <h2 class="section-title reveal">Hubungi Kami</h2>
+    <div class="contact-info reveal">
+      <p> lokasi: Jl. Hi Komarudin, Rajabasa, Bandar Lampung</p>
+      <p> WhatsApp: <a href="[https://wa.me/6283171323585](https://wa.me/6283171323585)" target="_blank">0831-7132-3585</a></p>
+      <p> Instagram: <a href="[https://www.instagram.com/lumpiabeef.isokuiki/](https://www.instagram.com/lumpiabeef.isokuiki/)" target="_blank">@Lumpiabeef.isokuiki</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Lumpia Beef Isokuiki. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <!-- Link ke file JavaScript -->
+  <script src="index.js"></script>
+</body>
+</html>
