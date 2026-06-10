@@ -1,28 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lumpia Beef Isokuiki | Enak, Lezat, Bergizi</title>
-  
-  <!-- Font Import -->
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap)" rel="stylesheet">
 
-  <!-- Link ke file CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Memanggil file CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header & Navbar -->
+  
   <header id="header">
     <div class="logo">
       <h1>LUMPIA<span>BEEF</span></h1>
     </div>
-    <div class="menu-toggle" id="mobile-menu">
-      <span></span><span></span><span></span>
-    </div>
+
     <nav id="navbar">
       <ul>
         <li><a href="#beranda">Beranda</a></li>
@@ -34,92 +28,50 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="beranda">
-    <h2 class="reveal">Lumpia Beef Isokuiki</h2>
-    <h3 class="reveal" style="transition-delay: 0.1s;">"ENAK, LEZAT, DAN BERGIZI!"</h3>
-    <p class="reveal" style="transition-delay: 0.2s;">
-      Sajian lumpia kulit super renyah dengan isian daging sapi tebal dan saus lumer. Dibuat dengan tekad untuk menyajikan kualitas terbaik dengan harga bersahabat.
+    <h2>Lumpia Beef Isokuiki</h2>
+    <h3>"ENAK, LEZAT, DAN BERGIZI!"</h3>
+    <p>
+      Sajian lumpia kulit super renyah dengan isian daging sapi tebal dan saus
+      lumer. Dibuat dengan tekad untuk menyajikan kualitas terbaik dengan
+      harga bersahabat.
     </p>
-    <div class="reveal" style="transition-delay: 0.3s;">
-      <a href="#pemesanan" class="btn-primary">Pesan Sekarang</a>
+    <div>
+      <a href="#produk" class="btn-primary">Lihat Menu</a>
     </div>
   </section>
 
-  <!-- Produk Section -->
   <section id="produk">
-    <h2 class="section-title reveal">Menu Unggulan</h2>
-    <div class="produk-grid">
-      
-      <div class="produk-card reveal">
-        <div class="produk-img-wrapper">
-          <img src="gambar_produk/lumpia beef patty.png" alt="Lumpia Beef Patty" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          <span class="img-placeholder" style="display:none;">🌯</span>
-        </div>
-        <div class="produk-info">
-          <h3>Lumpia Beef Patty</h3>
-          <p>Kulit lumpia super renyah, isian beef patty tebal, selada segar, irisan tomat, disiram saus & mayones spesial lumer.</p>
-          <div class="produk-price">Rp 12.000</div>
-          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty')">Pesan Ini</a>
-        </div>
-      </div>
-
-      <div class="produk-card reveal" style="transition-delay: 0.1s;">
-        <div class="produk-img-wrapper">
-          <img src="gambar_produk/lumpia beef patty telur.png" alt="Lumpia Beef Patty + Telur" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          <span class="img-placeholder" style="display:none;">🍳</span>
-        </div>
-        <div class="produk-info">
-          <h3>Beef Patty + Telur</h3>
-          <p>Ekstra protein! Ditambah telur ceplok gurih di atas beef patty hangat, sayuran segar, dan saus khas Isokuiki.</p>
-          <div class="produk-price">Rp 15.000</div>
-          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty + Telur')">Pesan Ini</a>
-        </div>
-      </div>
-
-      <div class="produk-card reveal" style="transition-delay: 0.2s;">
-        <div class="produk-img-wrapper">
-          <img src="gambar_produk/lumpia beef patty keju.png" alt="Lumpia Beef Patty + Keju" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          <span class="img-placeholder" style="display:none;">🧀</span>
-        </div>
-        <div class="produk-info">
-          <h3>Beef Patty + Keju</h3>
-          <p>Sensasi creamy maksimal! Tambahan slice keju meleleh menyelimuti beef patty, dipadu dengan sayur dan kulit krispi.</p>
-          <div class="produk-price">Rp 14.000</div>
-          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Beef Patty + Keju')">Pesan Ini</a>
-        </div>
-      </div>
-
-      <div class="produk-card reveal" style="transition-delay: 0.3s;">
-        <div class="produk-img-wrapper">
-          <img src="gambar_produk/lumpia smoked beef.png" alt="Lumpia Smoked Beef" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          <span class="img-placeholder" style="display:none;">🥩</span>
-        </div>
-        <div class="produk-info">
-          <h3>Smoked Beef</h3>
-          <p>Aroma smokey khas! Irisan daging sapi asap pilihan, selada, tomat, disempurnakan olesan saus mayones nikmat.</p>
-          <div class="produk-price">Rp 8.000</div>
-          <a href="#pemesanan" class="btn-outline" onclick="pilihMenu('Lumpia Smoked Beef')">Pesan Ini</a>
-        </div>
-      </div>
-
+    <h2 class="section-title">Menu Unggulan</h2>
+    <!-- Produk akan dirender oleh JavaScript agar terhubung dengan keranjang -->
+    <div class="produk-grid" id="produk-container">
+       <!-- JS Rendering -->
     </div>
   </section>
 
-  <!-- Tentang Kami -->
   <section id="tentang">
     <div class="tentang-container">
-      <h2 class="section-title reveal">Kisah Isokuiki</h2>
-      
-      <div class="card-info reveal">
+      <h2 class="section-title">Kisah Isokuiki</h2>
+      <div class="card-info">
         <h3>Awal Mula</h3>
-        <p>Kisah kami bukan tentang modal besar sejak hari pertama, melainkan tentang tekad dan proses belajar. Berawal dari 8 bulan pengalaman membantu usaha orang lain, kami mengumpulkan ilmu untuk melangkah sendiri. Kami memegang teguh satu rahasia: <strong>konsistensi</strong>. Tidak berkompromi soal rasa, pelayanan terbaik, dan selalu tepat waktu.</p>
+        <p>
+          Kisah kami bukan tentang modal besar sejak hari pertama, melainkan
+          tentang tekad dan proses belajar. Berawal dari 8 bulan pengalaman
+          membantu usaha orang lain, kami mengumpulkan ilmu untuk melangkah
+          sendiri. Kami memegang teguh satu rahasia:
+          <strong>konsistensi</strong>. Tidak berkompromi soal rasa, pelayanan
+          terbaik, dan selalu tepat waktu.
+        </p>
       </div>
 
-      <div class="card-info reveal">
+      <div class="card-info">
         <h3>Visi & Misi</h3>
-        <p><strong>Visi:</strong> Menjadi UMKM kuliner lumpia pilihan masyarakat dengan rasa khas, kualitas terbaik, dan pelayanan memuaskan.</p>
-        <p style="margin-top: 10px;"><strong>Misi:</strong></p>
+        <p>
+          <strong>Visi:</strong> Menjadi UMKM kuliner lumpia pilihan
+          masyarakat dengan rasa khas, kualitas terbaik, dan pelayanan
+          memuaskan.
+        </p>
+        <p style="margin-top: 10px"><strong>Misi:</strong></p>
         <ul>
           <li>Menyediakan lumpia dengan bahan berkualitas.</li>
           <li>Menjaga cita rasa yang khas dan konsisten.</li>
@@ -127,78 +79,97 @@
         </ul>
       </div>
 
-      <div class="card-info reveal">
+      <div class="card-info">
         <h3>Keunggulan Kami</h3>
-        <p>Isian daging sapi yang jauh lebih tebal (tidak pelit), tekstur kulit lumpia yang dijamin tetap renyah meskipun sudah dingin, serta harga yang sangat ramah di kantong pelajar maupun mahasiswa.</p>
+        <p>
+          Isian daging sapi yang jauh lebih tebal (tidak pelit), tekstur kulit
+          lumpia yang dijamin tetap renyah meskipun sudah dingin, serta harga
+          yang sangat ramah di kantong pelajar maupun mahasiswa.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Form Pemesanan -->
+  <!-- Form Pemesanan (Keranjang Belanja Interaktif) -->
   <section id="pemesanan">
-    <h2 class="section-title reveal">Form Pemesanan</h2>
-    <div class="form-container reveal">
-      <form id="form-pesan-wa">
-        <div class="form-group">
-          <label for="nama">Nama Lengkap</label>
-          <input type="text" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+    <h2 class="section-title">Keranjang Pemesanan</h2>
+    <div class="form-container">
+      
+      <h3 style="font-family: var(--font-heading); color: var(--color-dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Daftar Pesanan Anda</h3>
+      
+      <!-- Tempat Item Keranjang -->
+      <div id="cart-items-container">
+        <!-- Akan diisi oleh JS -->
+      </div>
+
+      <!-- Ringkasan Biaya -->
+      <div class="cart-summary" id="cart-summary" style="display: none;">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">Rp 0</span>
         </div>
-        
-        <div class="form-group">
-          <label for="menu">Pilihan Menu</label>
-          <select id="menu" class="form-control" required>
-            <option value="" disabled selected>-- Pilih Menu --</option>
-            <option value="Lumpia Beef Patty">Lumpia Beef Patty (Rp 12.000)</option>
-            <option value="Lumpia Beef Patty + Telur">Lumpia Beef Patty + Telur (Rp 15.000)</option>
-            <option value="Lumpia Beef Patty + Keju">Lumpia Beef Patty + Keju (Rp 14.000)</option>
-            <option value="Lumpia Smoked Beef">Lumpia Smoked Beef (Rp 8.000)</option>
-          </select>
+        <div class="summary-row">
+          <span>Ongkos Kirim (Estimasi)</span>
+          <span>Menyesuaikan WA</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total Estimasi</span>
+          <span id="summary-total">Rp 0</span>
         </div>
 
-        <div class="form-group">
-          <label for="jumlah">Jumlah Porsi</label>
-          <input type="number" id="jumlah" class="form-control" min="1" value="1" required>
-        </div>
+        <p style="text-align: center; color: var(--color-primary); font-size: 0.85rem; font-weight: bold; margin-top: 15px;">
+          *Wajib memesan minimal 2 produk untuk diproses!
+        </p>
+      </div>
 
-        <div class="form-group">
-          <label for="alamat">Alamat Pengiriman</label>
-          <textarea id="alamat" class="form-control" placeholder="Detail alamat lengkap (Jl, RT/RW, Patokan)" required></textarea>
-        </div>
+      <!-- Data Diri Form -->
+      <div class="form-group">
+        <label for="nama_pemesan">Nama Pemesan</label>
+        <input type="text" id="nama_pemesan" class="form-control" placeholder="Contoh: Budi Susanto" />
+      </div>
 
-        <div class="form-group">
-          <label for="catatan">Catatan Tambahan (Opsional)</label>
-          <input type="text" id="catatan" class="form-control" placeholder="Cth: Pedas sedang, jangan pakai tomat">
-        </div>
+      <div class="form-group">
+        <label for="alamat_pemesan">Alamat Pengiriman / Detail Meja</label>
+        <textarea id="alamat_pemesan" class="form-control" placeholder="Contoh: Jl. Mawar No 10, Patokan ruko biru"></textarea>
+      </div>
 
-        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">
-          Pesan via WhatsApp
-        </button>
-      </form>
+      <button onclick="prosesCheckout()" class="btn-primary pesan-wa-btn">
+        <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        Pesan Langsung via WhatsApp
+      </button>
     </div>
   </section>
 
-  <!-- Ulasan -->
   <section id="ulasan">
-    <h2 class="section-title reveal">Kata Mereka</h2>
+    <h2 class="section-title">Kata Mereka</h2>
     <div class="ulasan-grid">
-      <blockquote class="reveal">
-        <p>"Rasanya beneran pecah di mulut! Dagingnya kerasa banget bumbunya dan kejunya lumer pol. Fix bakal sering jajan di sini pas lagi ngerjain tugas kampus."</p>
+      <blockquote>
+        <p>
+          "Rasanya beneran pecah di mulut! Dagingnya kerasa banget bumbunya
+          dan kejunya lumer pol. Fix bakal sering jajan di sini pas lagi
+          ngerjain tugas kampus."
+        </p>
         <cite>— Dapin, Mahasiswa</cite>
       </blockquote>
-      <blockquote class="reveal" style="transition-delay: 0.15s;">
-        <p>"Kulit lumpianya renyah banget, sausnya juga juara beda dari yang lain. Pengirimannya cepat jadi pas nyampe rumah masih anget. Recommended banget!"</p>
+      <blockquote>
+        <p>
+          "Kulit lumpianya renyah banget, sausnya juga juara beda dari yang
+          lain. Pengirimannya cepat jadi pas nyampe rumah masih anget.
+          Recommended banget!"
+        </p>
         <cite>— Vira, Pelanggan Setia</cite>
       </blockquote>
     </div>
   </section>
 
-  <!-- Kontak & Footer -->
   <section id="kontak">
-    <h2 class="section-title reveal">Hubungi Kami</h2>
-    <div class="contact-info reveal">
-      <p> lokasi: Jl. Hi Komarudin, Rajabasa, Bandar Lampung</p>
-      <p> WhatsApp: <a href="[https://wa.me/6283171323585](https://wa.me/6283171323585)" target="_blank">0831-7132-3585</a></p>
-      <p> Instagram: <a href="[https://www.instagram.com/lumpiabeef.isokuiki/](https://www.instagram.com/lumpiabeef.isokuiki/)" target="_blank">@Lumpiabeef.isokuiki</a></p>
+    <h2 class="section-title">Hubungi Kami</h2>
+    <div class="contact-info">
+      <p>Lokasi: Jl. Hi Komarudin, Rajabasa, Bandar Lampung</p>
+      <p>WhatsApp: <a href="https://wa.me/6283171323585" target="_blank">0831-7132-3585</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/lumpiabeef.isokuiki/" target="_blank">@Lumpiabeef.isokuiki</a></p>
     </div>
   </section>
 
@@ -206,7 +177,16 @@
     <p>&copy; 2026 Lumpia Beef Isokuiki. Semua Hak Dilindungi.</p>
   </footer>
 
-  <!-- Link ke file JavaScript -->
-  <script src="index.js"></script>
+  <!-- Floating Cart Icon -->
+  <a href="#pemesanan" class="floating-cart">
+    <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+    <div class="cart-badge" id="cart-badge">0</div>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast">Item ditambahkan ke keranjang!</div>
+
+  <!-- Memanggil file JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
