@@ -48,9 +48,7 @@
 
   <section id="produk">
     <h2 class="section-title">Menu Unggulan</h2>
-    <!-- Produk akan dirender oleh JavaScript agar terhubung dengan keranjang -->
     <div class="produk-grid" id="produk-container">
-       <!-- JS Rendering -->
     </div>
   </section>
 
@@ -95,18 +93,14 @@
     </div>
   </section>
 
-  <!-- Form Pemesanan (Keranjang Belanja Interaktif) -->
+  <!-- Form Pemesanan -->
   <section id="pemesanan">
     <h2 class="section-title">Keranjang Pemesanan</h2>
     <div class="form-container">
       
       <h3 style="font-family: var(--font-heading); color: var(--color-dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Daftar Pesanan Anda</h3>
-      
-      <!-- Tempat Item Keranjang -->
       <div id="cart-items-container">
-        <!-- Akan diisi oleh JS -->
       </div>
-
       <!-- Ringkasan Biaya -->
       <div class="cart-summary" id="cart-summary" style="display: none;">
         <div class="summary-row">
@@ -127,7 +121,7 @@
         </p>
       </div>
 
-      <!-- Data Diri Form -->
+      <!-- Form -->
       <div class="form-group">
         <label for="nama_pemesan">Nama Pemesan</label>
         <input type="text" id="nama_pemesan" class="form-control" placeholder="Contoh: Budi Susanto" />
@@ -181,17 +175,13 @@
   <footer>
     <p>&copy; 2026 Lumpia Beef Isokuiki. Semua Hak Dilindungi.</p>
   </footer>
-
-  <!-- Floating Cart Icon -->
+  <!-- Cart Icon -->
   <a href="#pemesanan" class="floating-cart">
     <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
     <div class="cart-badge" id="cart-badge">0</div>
   </a>
-
-  <!-- Toast Notification -->
+  <!--Notification -->
   <div id="toast">Item ditambahkan ke keranjang!</div>
-
-  <!-- Memanggil file JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
