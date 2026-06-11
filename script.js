@@ -155,9 +155,9 @@ function showToast(message) {
 function prosesCheckout() {
   const totalItemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   
-  // SYARAT MUTLAK: Minimal 2 produk
+  //  Minimal 2 produk
   if (totalItemsCount < 2) {
-    alert("⚠️ Mohon maaf, Anda wajib memesan MINIMAL 2 PRODUK untuk dapat diproses pengirimannya.");
+    alert("Mohon maaf, Anda wajib memesan MINIMAL 2 PRODUK untuk dapat diproses pengirimannya.");
     return;
   }
 
@@ -165,7 +165,7 @@ function prosesCheckout() {
   const alamat = document.getElementById('alamat_pemesan').value.trim();
 
   if (!nama || !alamat) {
-    alert("⚠️ Mohon lengkapi Nama Pemesan dan Alamat Pengiriman terlebih dahulu.");
+    alert("Mohon lengkapi Nama Pemesan dan Alamat Pengiriman terlebih dahulu.");
     return;
   }
 
