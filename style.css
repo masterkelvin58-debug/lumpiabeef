@@ -41,6 +41,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-light);
   line-height: 1.7;
+  padding-bottom: 60px;
 }
 
 img {
@@ -93,6 +94,12 @@ header {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo h1 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -103,6 +110,17 @@ header {
 
 .logo h1 span {
   color: var(--color-white);
+}
+
+.header-logo {
+  height: 55px;
+  width: auto;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.header-logo:hover {
+  transform: scale(1.08) rotate(-5deg);
 }
 
 nav ul {
@@ -125,7 +143,9 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
-  nav { display: none; }
+  nav {
+    display: none;
+  }
 }
 
 @keyframes fadeInSlideUp {
@@ -156,13 +176,41 @@ nav a:focus {
   color: var(--color-white);
 }
 
+.hero-logo-wrapper {
+  opacity: 0;
+  animation: fadeInSlideUp 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes floatHeroLogo {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+  }
+  50% {
+    transform: translateY(-15px) scale(1.03);
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.3));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+  }
+}
+
+.hero-logo {
+  width: 260px;
+  max-width: 70vw;
+  margin-bottom: 1.5rem;
+  animation: floatHeroLogo 4s ease-in-out infinite;
+}
+
 #beranda h2 {
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-style: italic;
   text-shadow: 3px 3px 0 var(--color-primary);
   margin-bottom: 0.5rem;
-  opacity: 0; 
+  opacity: 0;
   animation: fadeInSlideUp 1s ease-out forwards;
   animation-delay: 0.2s;
 }
@@ -201,7 +249,11 @@ nav a:focus {
   padding: 1rem 2.5rem;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(192, 57, 43, 0.4);
-  transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.4s ease;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -209,10 +261,10 @@ nav a:focus {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-accent); 
-  color: var(--color-dark); 
-  transform: translateY(-4px) scale(1.05); 
-  box-shadow: 0 10px 25px rgba(241, 196, 15, 0.5); 
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(241, 196, 15, 0.5);
 }
 
 #produk {
@@ -232,55 +284,35 @@ nav a:focus {
   background: var(--color-white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(44, 24, 16, 0.05);
-  border: 1px solid rgba(245, 233, 217, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
 }
 
 .produk-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(192, 57, 43, 0.15);
-  border-color: var(--color-secondary);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(192, 57, 43, 0.2);
   z-index: 1;
 }
 
-/* ========================================= */
-/* --- BINGKAI FOTO PRODUK PREMIUM & MENARIK --- */
-/* ========================================= */
 .produk-img-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 3; 
-  /* Gradien lembut melingkar untuk kesan studio foto profesional */
-  background: radial-gradient(circle, #ffffff 40%, var(--color-light) 100%); 
+  aspect-ratio: 4/3;
+  background-color: var(--color-white);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  /* Pembatas estetis di bagian bawah bingkai foto */
-  border-bottom: 3px solid var(--color-secondary);
-  /* Bayangan dalam (inner shadow) untuk kedalaman bingkai */
-  box-shadow: inset 0 -8px 16px rgba(0, 0, 0, 0.03);
 }
 
 .produk-img-wrapper img {
-  width: 90%; /* Menyisakan sedikit ruang napas agar efek bingkai terlihat */
-  height: 90%;
-  object-fit: contain; 
-  border-radius: var(--radius-sm);
-  /* Efek bayangan produk 3D nyata mengikuti lekukan lumpia beef */
-  filter: drop-shadow(0 6px 10px rgba(44, 24, 16, 0.18));
-  /* Transisi halus saat gambar membesar */
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
 }
-
-/* Animasi memperbesar gambar lumpia di dalam bingkai saat kartu disorot */
-.produk-card:hover .produk-img-wrapper img {
-  transform: scale(1.06);
-}
-/* ========================================= */
 
 .img-placeholder {
   font-size: 4rem;
@@ -327,7 +359,10 @@ nav a:focus {
   background: transparent;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.3s ease;
 }
 
 .btn-outline:hover {
@@ -375,8 +410,12 @@ nav a:focus {
   text-align: center;
 }
 
-#ulasan .section-title { color: var(--color-white); }
-#ulasan .section-title::after { background-color: var(--color-accent); }
+#ulasan .section-title {
+  color: var(--color-white);
+}
+#ulasan .section-title::after {
+  background-color: var(--color-accent);
+}
 
 .ulasan-grid {
   display: grid;
@@ -394,8 +433,14 @@ blockquote {
   text-align: left;
 }
 
-blockquote p { font-style: italic; margin-bottom: 1rem; }
-blockquote cite { font-weight: bold; color: var(--color-accent); }
+blockquote p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+blockquote cite {
+  font-weight: bold;
+  color: var(--color-accent);
+}
 
 #pemesanan {
   padding: var(--space-xl) 5%;
@@ -581,9 +626,11 @@ blockquote cite { font-weight: bold; color: var(--color-accent); }
   bottom: 30px;
   transform: translateX(-50%);
   font-size: 0.9rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: opacity 0.5s, bottom 0.5s;
+  transition:
+    opacity 0.5s,
+    bottom 0.5s;
 }
 
 #toast.show {
@@ -599,10 +646,22 @@ blockquote cite { font-weight: bold; color: var(--color-accent); }
   text-align: center;
 }
 
-#kontak .section-title { color: var(--color-accent); }
-.contact-info { margin-top: var(--space-md); font-size: 1.1rem; }
-.contact-info p { margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.8); }
-.contact-info a { color: var(--color-accent); font-weight: bold; text-decoration: underline; }
+#kontak .section-title {
+  color: var(--color-accent);
+}
+.contact-info {
+  margin-top: var(--space-md);
+  font-size: 1.1rem;
+}
+.contact-info p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.contact-info a {
+  color: var(--color-accent);
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 footer {
   background: #111;
