@@ -182,12 +182,11 @@ function prosesCheckout() {
   orderText += `*Data Pengiriman:*\nNama: ${nama}\nAlamat/Meja: ${alamat}\n\nMohon segera diproses ya Kak, terima kasih!`;
 
   // Redirect ke WhatsApp
-  const noWA = "6283171323585"; // Ganti jika perlu
+  const noWA = "6283171323585";
   const waURL = `https://wa.me/${noWA}?text=${encodeURIComponent(orderText)}`;
   
   window.open(waURL, '_blank');
 }
-
 // Initialize On Load
 window.addEventListener('DOMContentLoaded', () => {
   renderProducts();
