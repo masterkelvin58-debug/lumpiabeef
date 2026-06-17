@@ -4,27 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lumpia Beef Isokuiki | Enak, Lezat, Bergizi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="gambar_produk/logo.png" rel="Icon">
-  <!-- Memanggil file CSS -->
+  <link href="[https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700&display=swap)" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   
   <header id="header">
-      <div class="logo">
+    <div class="logo">
       <a href="#beranda">
         <img src="gambar_produk/logo.png" alt="Logo Lumpia Beef Isokuiki" class="header-logo" />
-        </a>
+      </a>
       <h1>LUMPIA<span>BEEF</span></h1>
     </div>
+
+    <button id="hamburger-btn" class="hamburger-btn" aria-label="Buka Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
     <nav id="navbar">
       <ul>
         <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#produk">Produk</a></li>
         <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#pemesanan">Pesan</a></li>
+        <li><a href="#produk">Menu & Pesan</a></li>
+        <li><a href="#ulasan">Ulasan</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
@@ -46,98 +51,89 @@
     </div>
   </section>
 
-  <section id="produk">
-    <h2 class="section-title">Menu Unggulan</h2>
-    <div class="produk-grid" id="produk-container">
-    </div>
-  </section>
-
   <section id="tentang">
     <div class="tentang-container">
       <h2 class="section-title">Kisah Isokuiki</h2>
       <div class="card-info">
         <h3>Awal Mula</h3>
         <p>
-          Kisah kami bukan tentang modal besar sejak hari pertama, melainkan
-          tentang tekad dan proses belajar. Berawal dari 8 bulan pengalaman
-          membantu usaha orang lain, kami mengumpulkan ilmu untuk melangkah
-          sendiri. Kami memegang teguh satu rahasia:
-          <strong>konsistensi</strong>. Tidak berkompromi soal rasa, pelayanan
-          terbaik, dan selalu tepat waktu.
+          Setiap gigitan renyah Isokuiki bermula dari sebuah keberanian kecil. Kami tidak memulai dengan modal raksasa, melainkan dari keringat dan tekad selama 8 bulan membantu usaha kuliner orang lain. Dari sana, kami menyerap ilmu, meracik bumbu, dan menemukan rahasia terbesar sebuah cita rasa:
+          <strong>konsistensi dan cinta</strong>. Isokuiki lahir dari mimpi sederhana untuk menghadirkan lumpia beef kelas premium yang bisa dinikmati oleh siapa saja tanpa harus merogoh kocek terlalu dalam.
         </p>
       </div>
 
       <div class="card-info">
         <h3>Visi & Misi</h3>
         <p>
-          <strong>Visi:</strong> Menjadi UMKM kuliner lumpia pilihan
-          masyarakat dengan rasa khas, kualitas terbaik, dan pelayanan
-          memuaskan.
+          <strong>Visi:</strong> Menjadi pelopor inovasi jajanan lumpia beef nomor satu yang selalu dirindukan—merakyat di harga, namun ningrat di rasa.
         </p>
         <p style="margin-top: 10px"><strong>Misi:</strong></p>
         <ul>
-          <li>Menyediakan lumpia dengan bahan berkualitas.</li>
-          <li>Menjaga cita rasa yang khas dan konsisten.</li>
-          <li>Memberikan pelayanan terbaik kepada pelanggan.</li>
+          <li>Menyajikan isian daging yang melimpah dan jujur di setiap gulungannya.</li>
+          <li>Menjaga takaran bumbu dan tingkat kerenyahan kulit yang paripurna dari waktu ke waktu.</li>
+          <li>Melayani setiap pelanggan dengan kehangatan senyum layaknya sahabat.</li>
         </ul>
       </div>
 
       <div class="card-info">
-        <h3>Keunggulan Kami</h3>
+        <h3>Mengapa Harus Isokuiki?</h3>
         <p>
-          Isian daging sapi yang jauh lebih tebal (tidak pelit), tekstur kulit
-          lumpia yang dijamin tetap renyah meskipun sudah dingin, serta harga
-          yang sangat ramah di kantong pelajar maupun mahasiswa.
+          Karena kami menolak pelit bumbu! Nikmati sensasi <em>beef patty</em> yang sangat tebal, sayuran segar yang <em>crunchy</em>, serta saus mayones rahasia yang lumer seketika di mulut. Hebatnya lagi, kulit lumpia kami diracik khusus agar <strong>tetap renyah maksimal</strong> meskipun sudah dingin. Kemewahan rasa yang tak terlupakan, namun tetap sangat bersahabat untuk kantong pelajar dan mahasiswa!
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Form Pemesanan -->
-  <section id="pemesanan">
-    <h2 class="section-title">Keranjang Pemesanan</h2>
-    <div class="form-container">
-      
-      <h3 style="font-family: var(--font-heading); color: var(--color-dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Daftar Pesanan Anda</h3>
-      <div id="cart-items-container">
+  <section id="produk">
+    <h2 class="section-title">Menu & Pemesanan</h2>
+    
+    <div class="produk-layout">
+      <div class="produk-grid" id="produk-container">
+
+      <!-- JavaScript akan mengisi produk di sini -->
       </div>
-      <!-- Ringkasan Biaya -->
-      <div class="cart-summary" id="cart-summary" style="display: none;">
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span id="summary-subtotal">Rp 0</span>
+      <div id="area-pesanan">
+        <div class="form-container">
+          <h3 style="font-family: var(--font-heading); color: var(--color-dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Keranjang Anda</h3>
+          
+          <div id="cart-items-container"></div>
+
+          <div class="cart-summary" id="cart-summary" style="display: none;">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summary-subtotal">Rp 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Ongkir (Estimasi)</span>
+              <span>Menyesuaikan WA</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total Estimasi</span>
+              <span id="summary-total">Rp 0</span>
+            </div>
+            <p style="text-align: center; color: var(--color-primary); font-size: 0.85rem; font-weight: bold; margin-top: 15px;">
+              *Wajib memesan minimal 2 produk!
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="nama_pemesan">Nama Pemesan</label>
+            <input type="text" id="nama_pemesan" class="form-control" placeholder="Contoh: Budi Susanto" />
+          </div>
+
+          <div class="form-group">
+            <label for="alamat_pemesan">Alamat Pengiriman</label>
+            <textarea id="alamat_pemesan" class="form-control" placeholder="Contoh: Jl. Mawar No 10"></textarea>
+          </div>
+
+          <button onclick="prosesCheckout()" class="btn-primary pesan-wa-btn">
+            <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            Pesan via WhatsApp
+          </button>
         </div>
-        <div class="summary-row">
-          <span>Ongkos Kirim (Estimasi)</span>
-          <span>Menyesuaikan WA</span>
-        </div>
-        <div class="summary-row total">
-          <span>Total Estimasi</span>
-          <span id="summary-total">Rp 0</span>
-        </div>
-
-        <p style="text-align: center; color: var(--color-primary); font-size: 0.85rem; font-weight: bold; margin-top: 15px;">
-          *Wajib memesan minimal 2 produk untuk diproses!
-        </p>
       </div>
-
-      <!-- Form -->
-      <div class="form-group">
-        <label for="nama_pemesan">Nama Pemesan</label>
-        <input type="text" id="nama_pemesan" class="form-control" placeholder="Contoh: Budi Susanto" />
-      </div>
-
-      <div class="form-group">
-        <label for="alamat_pemesan">Alamat Pengiriman / Detail Meja</label>
-        <textarea id="alamat_pemesan" class="form-control" placeholder="Contoh: Jl. Mawar No 10, Patokan ruko biru"></textarea>
-      </div>
-
-      <button onclick="prosesCheckout()" class="btn-primary pesan-wa-btn">
-        <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-        </svg>
-        Pesan Langsung via WhatsApp
-      </button>
     </div>
   </section>
 
@@ -160,6 +156,18 @@
         </p>
         <cite>— Vira, Pelanggan Setia</cite>
       </blockquote>
+      <blockquote>
+        <p>
+          "Harganya ramah banget di kantong pelajar, tapi isian dagingnya nggak pelit sama sekali. Bikin kenyang parah, smoked beef-nya juara!"
+        </p>
+        <cite>— Bima, Anak Kos</cite>
+      </blockquote>
+      <blockquote>
+        <p>
+          "Baru pertama nyobain varian beef patty pake telur dan keju. Creamy, gurih, dan krispi di saat bersamaan. Bakal langganan terus nih buat temen lembur!"
+        </p>
+        <cite>— Rina, Karyawan Swasta</cite>
+      </blockquote>
     </div>
   </section>
 
@@ -167,21 +175,55 @@
     <h2 class="section-title">Hubungi Kami</h2>
     <div class="contact-info">
       <p>Lokasi: Jl. Hi Komarudin, Rajabasa, Bandar Lampung</p>
-      <p>WhatsApp: <a href="https://wa.me/6283171323585" target="_blank">0831-7132-3585</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/lumpiabeef.isokuiki/" target="_blank">@Lumpiabeef.isokuiki</a></p>
+      <p>WhatsApp: <a href="[https://wa.me/6283171323585](https://wa.me/6283171323585)" target="_blank">0831-7132-3585</a></p>
+      <p>Instagram: <a href="[https://www.instagram.com/lumpiabeef.isokuiki/](https://www.instagram.com/lumpiabeef.isokuiki/)" target="_blank">@Lumpiabeef.isokuiki</a></p>
     </div>
+
+    <!-- Tampilan baru form kontak yang lebih kecil -->
+    <form id="form-kontak" class="contact-form-container">
+      <h3 style="font-family: var(--font-heading); color: var(--color-dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">Tinggalkan Pesan</h3>
+      
+      <div class="form-group">
+        <label for="kontak_nama">Nama Lengkap</label>
+        <input type="text" id="kontak_nama" class="form-control" placeholder="Masukkan nama Anda" />
+        <div class="error-msg" id="error_nama">Mohon periksa kembali, kolom nama tidak boleh dibiarkan kosong.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="kontak_email">Alamat Email</label>
+        <input type="email" id="kontak_email" class="form-control" placeholder="Contoh: budi@email.com" />
+        <div class="error-msg" id="error_email">Mohon periksa kembali, email tidak boleh kosong dan harus mengandung karakter @ serta titik.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="kontak_pesan">Pesan</label>
+        <textarea id="kontak_pesan" class="form-control" placeholder="Tulis pesan Anda di sini..."></textarea>
+        <div class="error-msg" id="error_pesan">Mohon periksa kembali, kolom pesan tidak boleh dibiarkan kosong.</div>
+      </div>
+      
+      <button type="submit" class="btn-primary" style="width: 100%;">Kirim Pesan</button>
+      <div class="success-msg" id="kontak_success">Pesan Anda berhasil dikirim. Kami akan segera menghubungi Anda.</div>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2026 Lumpia Beef Isokuiki. Semua Hak Dilindungi.</p>
   </footer>
-  <!-- Cart Icon -->
-  <a href="#pemesanan" class="floating-cart">
+
+  <a href="#area-pesanan" class="floating-cart">
     <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
     <div class="cart-badge" id="cart-badge">0</div>
   </a>
-  <!--Notification -->
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Kembali ke atas">
+    <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="17 11 12 6 7 11"></polyline>
+      <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+  </button>
+
   <div id="toast">Item ditambahkan ke keranjang!</div>
+
   <script src="script.js"></script>
 </body>
 </html>
